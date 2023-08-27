@@ -13,6 +13,8 @@
 
 ## 環境作成
 
+### Expo
+
 Expo で試す。
 
 * https://reactnative.dev/docs/environment-setup
@@ -65,4 +67,43 @@ VS Code で React Native の拡張機能入れる。
 ```
 npx expo start --web
 ```
+
+### React Native CLI
+
+Expoを使わずに。
+
+Windows なので Android まわりの設定を行う。
+
+* https://reactnative.dev/docs/environment-setup?guide=native
+* https://learn.microsoft.com/ja-jp/windows/dev-environment/javascript/react-native-for-android
+
+NodeとJavaは既に入っているので、Chocolatey は使わずにAndroid Studioのインストールからやってみる。
+
+* https://developer.android.com/studio
+
+Android Studioインストール後、SDK Managerで`Android SDK Platform 33`を選択肢て入れる。
+
+ユーザ環境変数に`ANDROID_HOME`を追加。  
+`Path`に`%LOCALAPPDATA%\Android\Sdk\platform-tools`を追加。
+
+アプリケーションの作成。
+
+```
+npx react-native init AwesomeProjectNative
+```
+
+```
+cd AwesomeProjectNative
+npm run android
+```
+
+起動できなかった。
+
+Android Studioで仮想デバイスの作成が必要だった。
+
+* https://developer.android.com/studio/run/managing-avds?hl=ja
+
+Pixel 7 にして、ImageはTiramisuを選択。  
+
+無事起動できた。
 
