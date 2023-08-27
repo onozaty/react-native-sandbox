@@ -11,3 +11,25 @@
 * https://reactnative.dev/docs/using-a-scrollview
 * https://reactnative.dev/docs/using-a-listview
 
+## 環境作成
+
+Expo で試す。
+
+* https://reactnative.dev/docs/environment-setup
+
+node のバージョン確認。
+
+```
+node -v
+v18.14.2
+```
+
+プロジェクト作成、起動。  
+
+```
+npx create-expo-app AwesomeProject
+
+cd AwesomeProject
+npx expo start
+```
+
