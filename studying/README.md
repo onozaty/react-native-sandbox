@@ -33,3 +33,10 @@ cd AwesomeProject
 npx expo start
 ```
 
+iPhone に Expo Go 入れて確認。
+
+ブラウザでも確認したいので、下記を追加で入れる。
+
+```
+npx expo install react-native-web react-dom @expo/webpack-config
+```
