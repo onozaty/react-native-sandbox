@@ -68,6 +68,61 @@ VS Code で React Native の拡張機能入れる。
 npx expo start --web
 ```
 
+Expo のアカウント作ってpublishしてみる。
+
+アカウントは下記で作成。
+
+* https://expo.dev/
+
+プロジェクトのターミナルからログインする。
+
+```
+npx expo login
+```
+
+ログインできていることは下記で確認。
+
+```
+npx expo whoami
+```
+
+昔は`expo publish`で出来たみたいだけど、いまはできなそう。  
+下記を読んでみる。
+
+* https://docs.expo.dev/develop/development-builds/installation/
+
+`eas`のクライアントを入れる。
+
+```
+npm install -g eas-cli
+```
+
+プロジェクトに追加。
+
+```
+npx expo install expo-dev-client
+```
+
+```
+eas login
+```
+
+`eas.json`を作成。
+
+```json
+{
+  "build": {
+    "preview": {
+      "distribution": "internal"
+    }
+  }
+}
+```
+
+```
+eas update
+```
+
 ### React Native CLI
 
 Expoを使わずに。
