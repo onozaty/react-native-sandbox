@@ -40,3 +40,29 @@ iPhone に Expo Go 入れて確認。
 ```
 npx expo install react-native-web react-dom @expo/webpack-config
 ```
+
+VS Code で React Native の拡張機能入れる。
+
+* https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native
+
+`.vscode/launch.json` で Web で実行した場合にデバッグできるように。
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Web 19006",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:19006",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
+```
+
+```
+npx expo start --web
+```
+
