@@ -17,3 +17,14 @@ Expoにアップロード。
 ```
 eas update
 ```
+
+ESLint 導入。
+
+```
+npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react-hooks
+```
+
+```
+npx eslint --init
+```
+
