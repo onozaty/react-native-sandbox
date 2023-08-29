@@ -6,3 +6,14 @@ npx create-expo-app --template
 
 Blank (TypeScript) を選んで、アプリケーション名は`MemnoApp`に。
 
+Expoにログイン。
+
+```
+eas login
+```
+
+Expoにアップロード。
+
+```
+eas update
+```
