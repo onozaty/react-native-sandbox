@@ -1,15 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, ViewStyle } from 'react-native';
 
 type CircleButtonProps = {
-  children: string
+  children: string,
+  style?: ViewStyle,
 }
 
 export default function CircleButton(props: CircleButtonProps) {
-  const {children} = props;
+  const {children, style} = props;
 
   return (
-    <View style={styles.circleButton}>
+    <View style={[styles.circleButton, style]}>
       <Text style={styles.circleButtonLabel}>{children}</Text>
     </View>
   );
