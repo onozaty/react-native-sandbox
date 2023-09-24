@@ -1,17 +1,18 @@
 import React from 'react';
-import { StyleSheet, View, Text, ViewStyle } from 'react-native';
+import { StyleSheet, View, ViewStyle } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 
 type CircleButtonProps = {
-  children: string,
   style?: ViewStyle,
+  name: keyof typeof Feather.glyphMap;
 }
 
 export default function CircleButton(props: CircleButtonProps) {
-  const {children, style} = props;
+  const { style, name } = props;
 
   return (
     <View style={[styles.circleButton, style]}>
-      <Text style={styles.circleButtonLabel}>{children}</Text>
+      <Feather name={name} size={32} color="white" />
     </View>
   );
 }
