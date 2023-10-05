@@ -1,14 +1,18 @@
 import React from 'react';
-import { View, StyleSheet, TextInput, KeyboardAvoidingView, Alert } from 'react-native';
+import { View, StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native';
 import CircleButton from '../components/CircleButton';
+import { useNavigation } from '@react-navigation/native';
 
 export default function MemoEditScreen() {
+  const navigation = useNavigation();
   return (
     <KeyboardAvoidingView style={styles.container} behavior='height'>
       <View style={styles.inputContainer}>
         <TextInput value="買い物リス1ト" multiline style={styles.input} />
       </View>
-      <CircleButton name='check' onPress={() => { Alert.alert('Pressed!'); }} />
+      <CircleButton
+        name='check'
+        onPress={() => { navigation.goBack(); }} />
     </KeyboardAvoidingView>
   );
 }
